@@ -34,8 +34,8 @@ class BoardGame:
         for i in range(size):
             if all(self.get_grid_cell((i, j)) == self.get_grid_cell((i, 0)) != '' for j in range(size)):
                 return self.get_grid_cell((i, 0))
-            if all(self.get_grid_cell((j, i)) == self.get_grid_cell((i, 0)) != '' for j in range(size)):
-                return self.get_grid_cell((i, 0))
+            if all(self.get_grid_cell((j, i)) == self.get_grid_cell((0, i)) != '' for j in range(size)):
+                return self.get_grid_cell((0, i))
 
         if all(self.get_grid_cell((i, i)) == self.get_grid_cell((0, 0)) != '' for i in range(size)):
             return self.get_grid_cell((0, 0))

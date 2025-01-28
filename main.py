@@ -5,8 +5,7 @@ from game_ai import GameAI
 
 def main():
     try:
-        # board_size = int(input("Enter the board size (3-10): "))
-        board_size = 3
+        board_size = int(input("Enter the board size (3-10): "))
         if 3 <= board_size <= 10:
             board = BoardGame(board_size)
             gui = GameGUI(board_size)
