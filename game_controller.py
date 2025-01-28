@@ -1,5 +1,3 @@
-import time
-
 class GameController:
     __current_player = 'X'
     __game_running = False
@@ -33,7 +31,6 @@ class GameController:
         self.__gui.set_current_player_label(self.__current_player)
 
         if self.__is_ai_turn():
-            time.sleep(0.4)
             move = self.__ai.get_best_move()
             self.__make_move(move)
 
